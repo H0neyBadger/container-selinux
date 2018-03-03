@@ -120,6 +120,7 @@ allow container_runtime_t self:netlink_netfilter_socket create_socket_perms;
 allow container_runtime_t self:netlink_kobject_uevent_socket create_socket_perms;
 allow container_runtime_t self:netlink_tcpdiag_socket create_netlink_socket_perms;
 allow container_runtime_t self:netlink_socket create_socket_perms;
+allow container_runtime_t container_share_t: fifo_file { create unlink read write getattr };
 
 corenet_tcp_bind_generic_node(container_runtime_t)
 corenet_udp_bind_generic_node(container_runtime_t)
